@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@layer base {
+
+  body {
+    @apply bg-gray-50 text-gray-800 antialiased;
+  }
+
+  * {
+    @apply border-gray-200;
+  }
+
+  /* ENCABEZADOS EN BLANCO */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f3f4f6;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #003366;
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #002244;
+  }
+
+}
+
+@layer components {
+
+  /* SIDEBAR - AZUL MÁS OSCURO */
+  .sidebar-ui {
+    @apply
+      w-64
+      bg-[#002147]
+      text-white
+      border-r
+      border-[#00152e]
+      p-5
+      shadow-xl;
+  }
+
+  .sidebar-header {
+    @apply
+      pb-5
+      mb-6
+      border-b
+      border-white/20;
+  }
+
+  .sidebar-title {
+    @apply
+      text-2xl
+      font-bold
+      text-[#C9A227]
+      leading-tight;
+  }
+
+  .sidebar-link {
+    @apply
+      flex
+      items-center
+      gap-3
+      p-3
+      rounded-xl
+      transition-all
+      duration-300
+      hover:bg-white/10
+      hover:translate-x-1;
+  }
+
+  /* PÁGINAS */
+
+  .page-container {
+    @apply
+      bg-gray-50
+      min-h-screen
+      p-8;
+  }
+
+  .page-header {
+    @apply
+      mb-8
+      pb-4
+      border-b
+      border-[#C9A227]/30;
+  }
+
+  .page-title {
+    @apply
+      text-4xl
+      font-bold
+      text-white;
+  }
+
+  .page-subtitle {
+    @apply
+      text-gray-400
+      mt-1;
+  }
+
+  /* TARJETAS - FONDO SEMI TRANSPARENTE AZUL */
+  .dashboard-card {
+    @apply
+      bg-[#003366]/5
+      backdrop-blur-sm
+      border
+      border-[#003366]/10
+      rounded-2xl
+      shadow-md
+      p-5
+      transition-all
+      duration-300
+      hover:shadow-xl
+      hover:bg-[#003366]/8;
+  }
+
+  .dashboard-card-title {
+    @apply
+      text-[#C9A227]
+      font-semibold;
+  }
+
+  .dashboard-stat-value {
+    @apply
+      text-3xl
+      font-bold
+      text-white;
+  }
+
+  /* BOTONES DORADOS */
+  .button-primary {
+    @apply
+      bg-[#C9A227]
+      hover:bg-[#B8921D]
+      text-white
+      rounded-xl
+      transition-all
+      duration-300;
+  }
+
+  .button-secondary {
+    @apply
+      bg-[#003366]
+      hover:bg-[#002244]
+      text-white
+      rounded-xl
+      transition-all
+      duration-300;
+  }
+
+}
